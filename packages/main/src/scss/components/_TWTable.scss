@@ -1,0 +1,18 @@
+table {
+    tr {
+
+        td,
+        th {
+            border-bottom-width: 1px;
+            padding: 0.75rem;
+            border-bottom-color: var(--color-borderColor);
+        }
+
+        &:last-child {
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+
+}

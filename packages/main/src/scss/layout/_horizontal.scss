@@ -1,0 +1,351 @@
+.horizontalLayout {
+    .main_wrap {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 960px) {
+
+    .horizontal-navbar {
+        padding: 16px 0;
+        margin: 0px auto;
+        align-items: center;
+        display: flex;
+        z-index: 11;
+        font-size: 0.875rem;
+        position: relative;
+        gap: 3px;
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 15px;
+
+            a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                height: 40px;
+                padding-right: 10px;
+                border-radius: theme('borderRadius.md');
+
+                .sublink-dot {
+                    height: 6px;
+                    width: 6px;
+                    border-radius: 100%;
+                    background-color: var(--color-textSecondary);
+                    display: inline-block;
+                }
+
+                .navIcon {
+                    display: flex;
+                    z-index: 1;
+                    position: relative;
+                }
+
+                .ddIcon {
+                    margin-top: 2px;
+                }
+
+                &:hover {
+                    .texthover-primary {
+                        color: var(--color-primary);
+                    }
+
+                    .texthover-secondary {
+                        color: var(--color-secondary);
+                    }
+
+                    .texthover-info {
+                        color: var(--color-info);
+                    }
+
+                    .texthover-indigo {
+                        color: var(--color-indigo);
+                    }
+
+                    .texthover-success {
+                        color: var(--color-success);
+                    }
+
+                    .texthover-warning {
+                        color: var(--color-warning);
+                    }
+
+                    .texthover-error {
+                        color: var(--color-error);
+                    }
+                }
+
+            }
+        }
+
+        .navItem {
+            position: relative;
+        }
+
+        .ddMenu {
+            position: absolute;
+            width: 230px;
+            display: none;
+            top: 40px;
+            padding: 10px 15px;
+            z-index: 1;
+            background-color: var(--color-surface);
+            box-shadow: theme('boxShadow.DEFAULT');
+            border-radius: theme('borderRadius.md');
+
+            li {
+                margin-bottom: 3px;
+                margin-right: 0;
+
+                .icon-box {
+                    width: auto;
+
+                    i {
+                        width: 12px;
+                    }
+                }
+
+                a {
+                    opacity: 0.6;
+                    .sublink-dot {
+                        height: 6px;
+                        width: 6px;
+                        border-radius: 100%;
+                        background-color: var(--color-textSecondary);
+                        display: inline-block;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.router-link-exact-active {
+                        opacity: 1;
+                        font-weight: 600;
+                    }
+                }
+
+            }
+        }
+
+        .ddLevel-2,
+        .ddLevel-3 {
+            top: -5px;
+            left: 212px;
+        }
+
+        .navItem:hover {
+            >.ddMenu {
+                display: block;
+            }
+        }
+
+        >li:hover {
+            >.navItemLink {
+                opacity: 1;
+            }
+        }
+
+        .router-link-exact-active {
+            border-radius: theme('borderRadius.md');
+        }
+
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding-left: 12px;
+        }
+
+        .z-index-1 {
+            z-index: 1;
+            position: relative;
+        }
+
+        .bg-hover-success::before {
+            background-color: var(--color-success);
+            opacity: 12%;
+        }
+
+        .bg-hover-warning::before {
+            background-color: var(--color-warning);
+            opacity: 12%;
+        }
+
+        .bg-hover-primary::before {
+            background-color: var(--color-primary);
+            opacity: 12%;
+        }
+
+        .bg-hover-secondary::before {
+            background-color: var(--color-secondary);
+            opacity: 12%;
+        }
+
+        .bg-hover-indigo::before {
+            background-color: var(--color-indigo);
+            opacity: 12%;
+        }
+
+        .bg-hover-error::before {
+            background-color: var(--color-error);
+            opacity: 12%;
+        }
+
+        .bg-hover-info::before {
+            background-color: var(--color-info);
+            opacity: 12%;
+        }
+
+        .bgicn-hover-success::before {
+            background-color: var(--color-success);
+            opacity: 0;
+        }
+
+        .bgicn-hover-warning::before {
+            background-color: var(--color-warning);
+            opacity: 0;
+        }
+
+        .bgicn-hover-primary::before {
+            background-color: var(--color-primary);
+            opacity: 0;
+        }
+
+        .bgicn-hover-secondary::before {
+            background-color: var(--color-secondary);
+            opacity: 0;
+        }
+
+        .bgicn-hover-indigo::before {
+            background-color: var(--color-indigo);
+            opacity: 0;
+        }
+
+        .bgicn-hover-error::before {
+            background-color: var(--color-error);
+            opacity: 0;
+        }
+
+        .bgicn-hover-info::before {
+            background-color: var(--color-info);
+            opacity: 0;
+        }
+
+        .bg-hover-success,
+        .bg-hover-secondary,
+        .bg-hover-warning,
+        .bg-hover-primary,
+        .bg-hover-indigo,
+        .bg-hover-error,
+        .bg-hover-info,
+        .bgicn-hover-indigo,
+        .bgicn-hover-success,
+        .bgicn-hover-warning,
+        .bgicn-hover-primary,
+        .bgicn-hover-error,
+        .bgicn-hover-info,
+        .bgicn-hover-secondary {
+            &::before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                content: "";
+                width: 0px;
+                height: 100%;
+                border-radius: 9999px;
+                transition: all 0.4s ease-in-out;
+                z-index: 1
+            }
+
+            &:hover::before {
+                width: 100%;
+                z-index: 1;
+            }
+
+            &.v-list-item--active::before {
+                width: 100%;
+                z-index: 1;
+            }
+        }
+
+        .router-link-active {
+            &.bg-hover-primary {
+                background-color: var(--color-primary);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-primary);
+                    opacity: 0;
+                }
+            }
+
+            &.bg-hover-secondary {
+                background-color: var(--color-secondary);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-secondary);
+                    opacity: 0;
+                }
+            }
+
+            &.bg-hover-success {
+                background-color: var(--color-success);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-success);
+                    opacity: 0;
+                }
+            }
+
+            &.bg-hover-warning {
+                background-color: var(--color-warning);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-warning);
+                    opacity: 0;
+                }
+            }
+
+            &.bg-hover-indigo {
+                background-color: var(--color-indigo);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-indigo);
+                    opacity: 0;
+                }
+            }
+
+            &.bg-hover-error {
+                background-color: var(--color-error);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-error);
+                    opacity: 0;
+                }
+            }
+
+            &.bg-hover-info {
+                background-color: var(--color-info);
+                opacity: 12%;
+
+                &::before {
+                    background-color: var(--color-info);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

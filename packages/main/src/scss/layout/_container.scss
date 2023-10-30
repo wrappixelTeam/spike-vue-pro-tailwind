@@ -1,0 +1,28 @@
+html {
+    overflow-y: auto;
+}
+// #app{
+//     background: theme('colors.background');
+// }
+.main_wrap{
+    margin-left: 290px;
+    padding-left: 0!important;
+    min-height: 100vh;
+    position: relative;
+    padding: 20px 0;
+}
+
+.maxWidth {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+
+.right-pos-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+

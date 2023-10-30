@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//Components
+@import './components/TWCard';
+@import './components/TWTable';
+@import './components/TWButton';
+
+//Layouts
+@import './layout/container';
+@import './layout/sidebar';
+@import './layout/horizontal';
+@import './layout/reboot';
+@import './layout/customizer';
+@import './layout/dark';
+@import './theme/LightTheme';
+@import './theme/DarkTheme';
+
+//Landing page
+@import './landingpage/header';
+@import './landingpage/general';
+
+
+//Scrollbar
+@import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
